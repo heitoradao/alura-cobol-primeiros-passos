@@ -14,8 +14,8 @@
        WORKING-STORAGE SECTION.
        77 WRK-NUM1       PIC 9(02)     VALUE ZEROS.
        77 WRK-NUM2       PIC 9(02)     VALUE ZEROS.       
-       77 WRK-RESUL     PIC 9(04)     VALUE ZEROS.
-       77 WRK-RESTO         PIC 9(02)     VALUE ZEROS.
+       77 WRK-RESUL      PIC 9(04)     VALUE ZEROS.
+       77 WRK-RESTO      PIC 9(02)     VALUE ZEROS.
        PROCEDURE DIVISION.
            DISPLAY 'DIGITE O PRIMEIRO NUMERO..... : '.
              ACCEPT WRK-NUM1.
