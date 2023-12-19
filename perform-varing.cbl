@@ -7,15 +7,19 @@
       ***   AUTOR: IVAN
       ***   DATA : XX/XX/20XX
       ******************************************************
+
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        SPECIAL-NAMES.
            DECIMAL-POINT IS COMMA.
+
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        77 WRK-NUMERO      PIC 9(02)     VALUE ZEROS.
-       77 WRK-CONTADOR    PIC 9(02)     VALUE ZEROS.       
+       77 WRK-CONTADOR    PIC 9(02)     VALUE ZEROS.
        77 WRK-RESUL       PIC 9(03)     VALUE ZEROS.
+       77 WRK-CONTA       PIC 99        VALUE ZEROS.
+
        PROCEDURE DIVISION.
        0001-PRINCIPAL.
             PERFORM 0100-INICIALIZAR.
@@ -34,6 +38,7 @@
             END-PERFORM.
        0300-FINALIZAR.     
              DISPLAY  '--------- SAIDA DE DADOS ------------'.
-             DISPLAY ' FIM DE PROCESSAMENTO '.
+           DISPLAY ' FIM DE PROCESSAMENTO '
+           .
 
            
