@@ -2,7 +2,7 @@
        PROGRAM-ID. PRGCOB16.
       ******************************************************
       ***   AREA DE COMENTARIOS - REMARKS
-      ***   OBJETIVO DO PROGRAMA = PERFORM COM REPETICOES FINITAS 
+      ***   OBJETIVO DO PROGRAMA = PERFORM COM REPETICOES FINITAS
       ***                            USANDO VARYING
       ***   AUTOR: IVAN
       ***   DATA : XX/XX/20XX
@@ -23,12 +23,12 @@
        PROCEDURE DIVISION.
        0001-PRINCIPAL.
             PERFORM 0100-INICIALIZAR.
-             IF WRK-NUMERO GREATER 0 
+             IF WRK-NUMERO GREATER 0
                PERFORM 0200-PROCESSAR
                PERFORM 0300-FINALIZAR
-            END-IF.  
+            END-IF.
             STOP RUN.
-       0100-INICIALIZAR.     
+       0100-INICIALIZAR.
             DISPLAY 'DIGITE O NUMERO..... : '.
             ACCEPT WRK-NUMERO.
        0200-PROCESSAR.
@@ -36,9 +36,9 @@
                  COMPUTE WRK-RESUL = WRK-NUMERO * WRK-CONTADOR
                  DISPLAY WRK-NUMERO ' X ' WRK-CONTADOR ' = ' WRK-RESUL
             END-PERFORM.
-       0300-FINALIZAR.     
+       0300-FINALIZAR.
              DISPLAY  '--------- SAIDA DE DADOS ------------'.
            DISPLAY ' FIM DE PROCESSAMENTO '
            .
 
-           
+

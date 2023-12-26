@@ -1,12 +1,12 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. PRGCOB02.
       ******************************************************
-      ***   AREA DE COMENTARIOS - REMARKS 
+      ***   AREA DE COMENTARIOS - REMARKS
       ***   OBJETIVO DO PROGRAMA = RECEBER E IMPRIMIR UMA STRING
       ***   UTILIZAR VARIAVEIS NIVEL 77
       ***   AUTOR: IVAN
       ***   DATA : XX/XX/20XX
-      ******************************************************      
+      ******************************************************
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.

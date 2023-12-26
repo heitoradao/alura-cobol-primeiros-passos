@@ -1,13 +1,13 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. PRGCOB03.
       ******************************************************
-      ***   AREA DE COMENTARIOS - REMARKS 
+      ***   AREA DE COMENTARIOS - REMARKS
       ***   OBJETIVO DO PROGRAMA = RECEBER E IMPRIMIR DATA DO SISTEMA
       ***   UTILIZAR VARIAVEIS NIVEL 01.02... (ESTRUTURADAS)
       ***   CONCEITOS E USO DE ENDERECAMENTO DE MEMORIA
       ***   AUTOR: IVAN
       ***   DATA : XX/XX/20XX
-      ******************************************************      
+      ******************************************************
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
