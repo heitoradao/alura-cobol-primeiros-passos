@@ -28,7 +28,6 @@ task :build do |_task, args|
   files.each do |filename|
     cmd = "cobc -v -std=ibm-strict -Wall -Wcolumn-overflow -x #{filename}"
     sh cmd
-    # puts `#{cmd}`
   end
 end
 
@@ -43,12 +42,8 @@ task :clean do
 
   puts "Estes arquivos serão apagados:", executables
 
-  print "Confirma? (s/N) "
-  confirma = gets
-  if /^s$/i.match?(confirma)
-    executables.each do |f|
-      File.unlink(f)
-    end
+  executables.each do |f|
+    File.unlink(f)
   end
 end
 
