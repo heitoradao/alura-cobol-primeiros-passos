@@ -6,19 +6,23 @@
       ***   AUTOR: IVAN
       ***   DATA : XX/XX/20XX
       ******************************************************
+
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        SPECIAL-NAMES.
            DECIMAL-POINT IS COMMA.
+
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-       77 WRK-NOTA1   PIC 9(02)     VALUE ZEROS.
-       77 WRK-NOTA2   PIC 9(02)     VALUE ZEROS.
-       77 WRK-MEDIA   PIC 9(02)V9   VALUE ZEROS.
+       77  WRK-NOTA1   PIC 9(02)     VALUE ZEROS.
+       77  WRK-NOTA2   PIC 9(02)     VALUE ZEROS.
+       77  WRK-MEDIA   PIC 9(02)V9   VALUE ZEROS.
+
        PROCEDURE DIVISION.
-           PERFORM 0100-INPUT.
-           PERFORM 0200-OUTPUT.
-           STOP RUN.
+           PERFORM 0100-INPUT
+           PERFORM 0200-OUTPUT
+           STOP RUN
+           .
 
        0100-INPUT.
            DISPLAY 'Nota 1: '
@@ -26,7 +30,8 @@
            DISPLAY 'Nota 2: '
            ACCEPT WRK-NOTA2
            COMPUTE WRK-MEDIA = (WRK-NOTA1 + WRK-NOTA2) /  2
-           DISPLAY '== MEDIA DO ALUNO ======  ' WRK-MEDIA.
+           DISPLAY '== MEDIA DO ALUNO ======  ' WRK-MEDIA
+           .
 
        0200-OUTPUT.
            EVALUATE WRK-MEDIA
@@ -38,4 +43,5 @@
                DISPLAY  'RECUPERACAO '
              WHEN OTHER
                DISPLAY  'REPROVADO '
-           END-EVALUATE.
+           END-EVALUATE
+           .

@@ -6,10 +6,12 @@
       ***   AUTOR: IVAN
       ***   DATA : XX/XX/20XX
       ******************************************************
+
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        SPECIAL-NAMES.
            DECIMAL-POINT IS COMMA.
+
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        77 WRK-USUARIO       PIC X(20)     VALUE SPACES.
@@ -18,16 +20,19 @@
           88 USER    VALUE 02.
 
        PROCEDURE DIVISION.
-           DISPLAY 'USUARIO ..... : '.
-             ACCEPT WRK-USUARIO.
-           DISPLAY 'NIVEL..... : '.
-             ACCEPT WRK-NIVEL.
+           DISPLAY 'USUARIO ..... : '
+           ACCEPT WRK-USUARIO
+           DISPLAY 'NIVEL..... : '
+           ACCEPT WRK-NIVEL
 
-            IF ADM
-                 DISPLAY  'NIVEL - ADMINISTRADOR '
-            ELSE
-                 IF USER
+           IF ADM
+               DISPLAY  'NIVEL - ADMINISTRADOR '
+           ELSE
+               IF USER
                    DISPLAY 'NIVEL - USUARIO'
-            END-IF.
+               END-IF
+           END-IF
 
-           STOP RUN.
+           STOP RUN
+           .
+

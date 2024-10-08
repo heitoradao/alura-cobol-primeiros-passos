@@ -6,9 +6,13 @@
       ***   AUTOR: IVAN
       ***   DATA : XX/XX/20XX
       ******************************************************
+
        ENVIRONMENT DIVISION.
+
        DATA DIVISION.
        WORKING-STORAGE SECTION.
+
        PROCEDURE DIVISION.
-           DISPLAY 'HELLO ALURA'.
-           STOP RUN.
+           DISPLAY 'HELLO ALURA'
+           STOP RUN
+           .
