@@ -13,11 +13,11 @@
        CONFIGURATION SECTION.
        SPECIAL-NAMES.
            DECIMAL-POINT IS COMMA.
-       
+
        DATA DIVISION.
        WORKING-STORAGE SECTION.
            COPY 'BOOK.CPY'.
-       
+
        PROCEDURE DIVISION.
        0001-PRINCIPAL.
            PERFORM 0100-INICIALIZAR
@@ -25,6 +25,7 @@
                PERFORM 0200-PROCESSAR UNTIL WRK-VENDAS = 0
            END-IF
            PERFORM 0300-FINALIZAR
+
            STOP RUN
            .
 
@@ -40,7 +41,7 @@
            .
 
        0300-FINALIZAR.
-           DISPLAY  '---------------------'
+           DISPLAY '---------------------'
            DISPLAY 'TOTAL DAS VENDAS     ' WRK-ACUM
            DISPLAY 'QUANTIDADE DE VENDAS ' WRK-QT
            DISPLAY ' FIM DE PROCESSAMENTO '

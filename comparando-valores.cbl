@@ -3,13 +3,15 @@
       ******************************************************
       ***   AREA DE COMENTARIOS - REMARKS
       ***   OBJETIVO DO PROGRAMA = COMANDO EVALUATE
-      ***   AUTOR: IVAN
-      ***   DATA : XX/XX/20XX
+      ***   AUTOR: HEITOR JR
+      ***   DATA : 10/10/2024
       ******************************************************
+
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        SPECIAL-NAMES.
            DECIMAL-POINT IS COMMA.
+
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        77  WRK-PRODUTO     PIC X(20)     VALUE SPACES.
@@ -17,18 +19,27 @@
        77  WRK-UF          PIC X(02)     VALUE 'SP'.
        77  WRK-FRETE       PIC 9(04)V99  VALUE ZEROS.
 
-       PROCEDURE DIVISION.
-           DISPLAY 'PRODUTO COMPRADO..... : '.
-           ACCEPT WRK-PRODUTO.
-           DISPLAY 'VALOR DO PRODUTO...... : '.
-           ACCEPT WRK-VALOR.
-           DISPLAY 'ESTADO DE ENTREGA (SP/RJ/MG).. : '.
-           ACCEPT WRK-UF.
+       77  WRK-VALOR-ED    PIC $ZZZ.ZZ9,99.
 
-           DISPLAY  '--------- SAIDA DE DADOS --------------------'.
-           DISPLAY 'PRODUTO... : ' WRK-PRODUTO.
-           DISPLAY 'VALOR..... : ' WRK-VALOR.
-           DISPLAY 'ESTADO.... : ' WRK-UF.
+       PROCEDURE DIVISION.
+           DISPLAY 'PRODUTO COMPRADO..... : '
+               WITH NO ADVANCING
+           ACCEPT WRK-PRODUTO
+           MOVE FUNCTION UPPER-CASE(WRK-PRODUTO) TO WRK-PRODUTO
+
+           DISPLAY 'VALOR DO PRODUTO...... : '
+               WITH NO ADVANCING
+           ACCEPT WRK-VALOR
+           MOVE WRK-VALOR TO WRK-VALOR-ED
+
+           DISPLAY 'ESTADO DE ENTREGA (SP/RJ/MG).. : '
+           ACCEPT WRK-UF
+           MOVE FUNCTION UPPER-CASE(WRK-UF) TO WRK-UF
+
+           DISPLAY  '--------- SAIDA DE DADOS --------------------'
+           DISPLAY 'PRODUTO... : ' WRK-PRODUTO
+           DISPLAY 'VALOR..... : ' WRK-VALOR-ED
+           DISPLAY 'ESTADO.... : ' WRK-UF
 
       *********** OPERACAO CALCULO FRETE - COMANDO EVALUATE ***********
            EVALUATE WRK-UF
@@ -42,11 +53,13 @@
                        DISPLAY 'NAO PODEMOS ENTREGAR NESSE ESTADO'
            END-EVALUATE
 
-           DISPLAY '==========================='
+           DISPLAY '==================================='
            IF WRK-FRETE NOT EQUAL 0
-               DISPLAY 'VALOR DO PRODUTO COM FRETE   ' WRK-FRETE
+               MOVE WRK-FRETE TO WRK-VALOR-ED
+               DISPLAY 'VALOR DO PRODUTO COM FRETE: ' WRK-VALOR-ED
            END-IF
+           DISPLAY '==================================='
 
-           DISPLAY '==========================='
            STOP RUN
            .
+
